@@ -103,7 +103,6 @@ one_shot = true
 limit_left = 0
 limit_bottom = 540
 position_smoothing_enabled = true
-position_smoothing_speed = 1.0
 script = ExtResource("3_sr2m4")
 
 [node name="Boom" type="AudioStreamPlayer2D" parent="." unique_id=1667062682]
@@ -116,4 +115,5 @@ volume_db = 2.0
 
 [connection signal="area_entered" from="colider" to="." method="_on_colider_area_entered"]
 [connection signal="body_entered" from="jump" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="jump" to="." method="_on_jump_body_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

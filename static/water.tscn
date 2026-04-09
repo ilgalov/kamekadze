@@ -3,7 +3,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_brsoc"]
 size = Vector2(81, 23)
 
-[node name="Water" type="StaticBody2D" unique_id=119407617]
+[node name="Water" type="StaticBody2D" unique_id=119407617 groups=["floor"]]
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1525990308]
 offset_right = 81.0

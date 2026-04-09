@@ -27,6 +27,10 @@ window/size/mode=3
 window/stretch/mode="canvas_items"
 window/stretch/aspect="keep_height"
 
+[global_group]
+
+floor=""
+
 [input]
 
 ui_left={

@@ -26,7 +26,7 @@ rotation = 1.5707964
 scale = Vector2(0.6600003, 0.5)
 
 [node name="StaticBody2D9" parent="." unique_id=1100460950 instance=ExtResource("1_dbls1")]
-position = Vector2(2189, -500.00003)
+position = Vector2(2189, -404)
 rotation = 1.5707964
 scale = Vector2(0.6600003, 0.5)
 
@@ -76,17 +76,17 @@ Left/Right (A/D) - Turn"
 horizontal_alignment = 1
 
 [node name="Water" parent="." unique_id=119407617 instance=ExtResource("3_33cqm")]
-position = Vector2(2325, -305)
+position = Vector2(2189, -404)
 scale = Vector2(0.51998043, 1)
 
 [node name="Water2" parent="." unique_id=780892166 instance=ExtResource("3_33cqm")]
-position = Vector2(2189.0002, -195.99998)
+position = Vector2(2330, -246)
 scale = Vector2(0.45238486, 1)
 
 [node name="Water3" parent="." unique_id=1703720324 instance=ExtResource("3_33cqm")]
-position = Vector2(2325, -55)
+position = Vector2(2189, -93)
 scale = Vector2(0.51998043, 1)
 
 [node name="Water4" parent="." unique_id=832301275 instance=ExtResource("3_33cqm")]
-position = Vector2(2189.0002, 54)
+position = Vector2(2330, 75.99998)
 scale = Vector2(0.45238486, 1)
