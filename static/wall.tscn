@@ -4,6 +4,7 @@
 size = Vector2(1918, 40)
 
 [node name="wall" type="StaticBody2D" unique_id=1736426961 groups=["floor"]]
+collision_layer = 2
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1377593563]
 offset_right = 1918.0

@@ -46,6 +46,12 @@ ui_right={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="tnt"
+2d_physics/layer_2="wall"
+2d_physics/layer_3="water"
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=3
