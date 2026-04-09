@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b6e3o4ryjkd7l" path="res://static/wall.tscn" id="1_dbls1"]
 [ext_resource type="PackedScene" uid="uid://8tipul0mg5qk" path="res://player/player_tnt.tscn" id="2_33cqm"]
+[ext_resource type="PackedScene" uid="uid://dcr58so575tea" path="res://static/water.tscn" id="3_33cqm"]
 
 [node name="game" type="Node2D" unique_id=709406384]
 
@@ -49,7 +50,7 @@ rotation = 6.2831855
 scale = Vector2(0.4740901, 4.176939)
 
 [node name="player_tnt" parent="." unique_id=54438833 instance=ExtResource("2_33cqm")]
-position = Vector2(372, 260)
+position = Vector2(1971, -460)
 rotation = 0.37347364
 
 [node name="Label" type="Label" parent="." unique_id=2092429065]
@@ -73,3 +74,19 @@ theme_override_font_sizes/font_size = 5
 text = "Spacebar - Explode
 Left/Right (A/D) - Turn"
 horizontal_alignment = 1
+
+[node name="Water" parent="." unique_id=119407617 instance=ExtResource("3_33cqm")]
+position = Vector2(2325, -305)
+scale = Vector2(0.51998043, 1)
+
+[node name="Water2" parent="." unique_id=780892166 instance=ExtResource("3_33cqm")]
+position = Vector2(2189.0002, -195.99998)
+scale = Vector2(0.45238486, 1)
+
+[node name="Water3" parent="." unique_id=1703720324 instance=ExtResource("3_33cqm")]
+position = Vector2(2325, -55)
+scale = Vector2(0.51998043, 1)
+
+[node name="Water4" parent="." unique_id=832301275 instance=ExtResource("3_33cqm")]
+position = Vector2(2189.0002, 54)
+scale = Vector2(0.45238486, 1)
