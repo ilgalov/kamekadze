@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://cik5gdi5oh5ir" path="res://script/player_tnt.gd" id="1_duxnt"]
 [ext_resource type="Script" uid="uid://duvfkhoyblfyq" path="res://player/Camera/camera_2d.gd" id="3_sr2m4"]
 [ext_resource type="AudioStream" uid="uid://cb5kfw0abwg3b" path="res://sound/взрыв.MP3" id="4_ghfsp"]
+[ext_resource type="AudioStream" uid="uid://8amghqccgpbo" path="res://sound/zvuk-peska-5.mp3" id="5_cmeql"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_duxnt"]
 rough = true
@@ -91,8 +92,13 @@ position_smoothing_enabled = true
 position_smoothing_speed = 1.0
 script = ExtResource("3_sr2m4")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1667062682]
+[node name="Boom" type="AudioStreamPlayer2D" parent="." unique_id=1667062682]
 stream = ExtResource("4_ghfsp")
+volume_db = -5.0
+
+[node name="reloud" type="AudioStreamPlayer2D" parent="." unique_id=1625328889]
+stream = ExtResource("5_cmeql")
+volume_db = 2.0
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
