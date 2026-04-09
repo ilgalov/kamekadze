@@ -21,15 +21,10 @@ position = Vector2(2390, -597)
 rotation = 1.5707964
 scale = Vector2(0.4200012, 0.5799997)
 
-[node name="StaticBody2D3" parent="." unique_id=1070445278 instance=ExtResource("1_dbls1")]
-position = Vector2(1630, -404)
-rotation = 1.5707964
-scale = Vector2(0.6600003, 0.5)
-
 [node name="StaticBody2D9" parent="." unique_id=1100460950 instance=ExtResource("1_dbls1")]
 position = Vector2(2189, -404)
 rotation = 1.5707964
-scale = Vector2(0.6600003, 0.5)
+scale = Vector2(0.6600003, 14.460002)
 
 [node name="StaticBody2D4" parent="." unique_id=596194777 instance=ExtResource("1_dbls1")]
 position = Vector2(490, 458)
@@ -48,7 +43,7 @@ scale = Vector2(0.47, 0.401)
 [node name="StaticBody2D5" parent="." unique_id=1465633851 instance=ExtResource("1_dbls1")]
 position = Vector2(1193, 357)
 rotation = 6.2831855
-scale = Vector2(0.4740901, 4.176939)
+scale = Vector2(0.2340901, 4.176939)
 
 [node name="player_tnt" parent="." unique_id=54438833 instance=ExtResource("2_33cqm")]
 position = Vector2(567.0001, 367)
@@ -79,6 +74,10 @@ horizontal_alignment = 1
 [node name="Water" parent="." unique_id=119407617 instance=ExtResource("3_33cqm")]
 position = Vector2(2189, -404)
 scale = Vector2(0.51998043, 1)
+
+[node name="Water5" parent="." unique_id=1092534127 instance=ExtResource("3_33cqm")]
+position = Vector2(1049, 496)
+scale = Vector2(1.775, 1)
 
 [node name="Water2" parent="." unique_id=780892166 instance=ExtResource("3_33cqm")]
 position = Vector2(2330, -246)
