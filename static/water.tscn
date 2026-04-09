@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dcr58so575tea"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_brsoc"]
+size = Vector2(81, 23)
+
+[node name="Water" type="StaticBody2D" unique_id=119407617]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1525990308]
+offset_right = 81.0
+offset_bottom = 23.0
+color = Color(7.123351e-06, 0.6153163, 0.6153164, 1)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1814417238]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1711023210]
+position = Vector2(40.5, 11.5)
+shape = SubResource("RectangleShape2D_brsoc")

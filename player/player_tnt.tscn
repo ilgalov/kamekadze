@@ -48,8 +48,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8q1fo"]
-radius = 11.0
-height = 49.998096
+radius = 10.999581
+height = 50.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_duxnt"]
 size = Vector2(20, 2)
@@ -72,7 +72,7 @@ frame_progress = 0.83029133
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1840764166]
 position = Vector2(0, 3)
-rotation = 0.008726646
+scale = Vector2(1.05, 1)
 shape = SubResource("CapsuleShape2D_8q1fo")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1451204177]
