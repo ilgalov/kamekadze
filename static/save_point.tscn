@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://6a65es271nxm"]
+
+[sub_resource type="GDScript" id="GDScript_wvpmc"]
+resource_name = "SavePoint"
+script/source = "extends StaticBody2D
+
+
+func _on_area_2d_body_entered(_body: Node2D) -> void:
+	Global.spawn = global_position + Vector2(0, -50)
+"
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wvpmc"]
+radius = 9.0
+height = 20.0
+
+[node name="SavePoint" type="StaticBody2D" unique_id=794719638]
+script = SubResource("GDScript_wvpmc")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=340858593]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = -20.0
+offset_right = 3.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.4574036, 0.34918332, 0.19649062, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=2052179619]
+offset_left = 3.0
+offset_top = -20.0
+offset_right = 18.0
+offset_bottom = -12.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1320078918]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=451850164]
+position = Vector2(9, -10)
+shape = SubResource("CapsuleShape2D_wvpmc")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

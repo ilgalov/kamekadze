@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://b6e3o4ryjkd7l" path="res://static/wall.tscn" id="1_dbls1"]
 [ext_resource type="PackedScene" uid="uid://8tipul0mg5qk" path="res://player/player_tnt.tscn" id="2_33cqm"]
 [ext_resource type="PackedScene" uid="uid://dcr58so575tea" path="res://static/water.tscn" id="3_33cqm"]
+[ext_resource type="PackedScene" uid="uid://6a65es271nxm" path="res://static/save_point.tscn" id="4_xwcet"]
 
 [node name="game" type="Node2D" unique_id=709406384]
 
@@ -50,14 +51,14 @@ rotation = 6.2831855
 scale = Vector2(0.4740901, 4.176939)
 
 [node name="player_tnt" parent="." unique_id=54438833 instance=ExtResource("2_33cqm")]
-position = Vector2(1971, -460)
+position = Vector2(567.0001, 367)
 rotation = 0.37347364
 
 [node name="Label" type="Label" parent="." unique_id=2092429065]
 offset_left = -139.0
-offset_top = 15.999985
+offset_top = 16.0
 offset_right = -9.0
-offset_bottom = 65.70415
+offset_bottom = 65.70416
 scale = Vector2(11.264239, 18.429537)
 theme_override_font_sizes/font_size = 5
 text = "Hello, this is a test area.
@@ -90,3 +91,6 @@ scale = Vector2(0.51998043, 1)
 [node name="Water4" parent="." unique_id=832301275 instance=ExtResource("3_33cqm")]
 position = Vector2(2330, 75.99998)
 scale = Vector2(0.45238486, 1)
+
+[node name="SavePoint" parent="." unique_id=794719638 instance=ExtResource("4_xwcet")]
+position = Vector2(2084, -404)

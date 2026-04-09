@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://8tipul0mg5qk"]
 
 [ext_resource type="Texture2D" uid="uid://mulijsvts8n5" path="res://sprite/tnt.png" id="1_bu7am"]
-[ext_resource type="Script" uid="uid://cik5gdi5oh5ir" path="res://script/player_tnt.gd" id="1_duxnt"]
+[ext_resource type="Script" uid="uid://cik5gdi5oh5ir" path="res://player/script/player_tnt.gd" id="1_duxnt"]
 [ext_resource type="Script" uid="uid://duvfkhoyblfyq" path="res://player/Camera/camera_2d.gd" id="3_sr2m4"]
 [ext_resource type="AudioStream" uid="uid://cb5kfw0abwg3b" path="res://sound/взрыв.MP3" id="4_ghfsp"]
 [ext_resource type="AudioStream" uid="uid://8amghqccgpbo" path="res://sound/zvuk-peska-5.mp3" id="5_cmeql"]

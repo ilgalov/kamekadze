@@ -4,6 +4,9 @@ var speed_rot := 15
 var jump_count = 0
 var jump = false
 
+func _ready() -> void:
+	global_position = Global.spawn
+
 func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 	if (Input.is_action_just_pressed("ui_accept") or jump) and jump_count > 0:
 		var xa = sign(global_position.x - $Marker_move.global_position.x)
