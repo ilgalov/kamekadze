@@ -114,5 +114,6 @@ volume_db = -5.0
 stream = ExtResource("5_cmeql")
 volume_db = 2.0
 
+[connection signal="area_entered" from="colider" to="." method="_on_colider_area_entered"]
 [connection signal="body_entered" from="jump" to="." method="_on_area_2d_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

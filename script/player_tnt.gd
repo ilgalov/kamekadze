@@ -28,3 +28,10 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 
 func _on_timer_timeout() -> void:
 	jump = false
+
+
+func _on_colider_area_entered(area: Area2D) -> void:
+	call_deferred("reloud")
+
+func reloud():
+	get_tree().reload_current_scene()
