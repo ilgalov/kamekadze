@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://b28mymkxpotkt"]
+
+[ext_resource type="PackedScene" uid="uid://b6e3o4ryjkd7l" path="res://static/wall.tscn" id="1_dbls1"]
+[ext_resource type="PackedScene" uid="uid://8tipul0mg5qk" path="res://player/player_tnt.tscn" id="2_33cqm"]
+
+[node name="game" type="Node2D" unique_id=709406384]
+
+[node name="StaticBody2D" parent="." unique_id=426777202 instance=ExtResource("1_dbls1")]
+position = Vector2(3, 519)
+scale = Vector2(2.5800004, 0.81999874)
+
+[node name="StaticBody2D2" parent="." unique_id=1736426961 instance=ExtResource("1_dbls1")]
+position = Vector2(1498, -599)
+rotation = 1.5707964
+scale = Vector2(0.4200012, 0.5799997)
+
+[node name="StaticBody2D3" parent="." unique_id=1070445278 instance=ExtResource("1_dbls1")]
+position = Vector2(1630, -404)
+rotation = 1.5707964
+scale = Vector2(0.6600003, 0.5)
+
+[node name="StaticBody2D4" parent="." unique_id=596194777 instance=ExtResource("1_dbls1")]
+position = Vector2(490, 458)
+scale = Vector2(0.29158887, 1.601432)
+
+[node name="StaticBody2D6" parent="." unique_id=1040647461 instance=ExtResource("1_dbls1")]
+position = Vector2(2189, -388)
+rotation = 3.1415927
+scale = Vector2(0.29158887, 0.40143183)
+
+[node name="StaticBody2D5" parent="." unique_id=1465633851 instance=ExtResource("1_dbls1")]
+position = Vector2(1193, 357)
+rotation = 6.2831855
+scale = Vector2(0.4740901, 4.176939)
+
+[node name="player_tnt" parent="." unique_id=54438833 instance=ExtResource("2_33cqm")]
+position = Vector2(372, 260)
+rotation = 0.37347364
+
+[node name="Label" type="Label" parent="." unique_id=2092429065]
+offset_left = -139.0
+offset_top = 15.999985
+offset_right = -9.0
+offset_bottom = 65.70415
+scale = Vector2(11.264239, 18.429537)
+theme_override_font_sizes/font_size = 5
+text = "Hello, this is a test area.
+"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="." unique_id=1962924415]
+offset_left = 292.0
+offset_top = 160.0
+offset_right = 345.0
+offset_bottom = 209.70416
+scale = Vector2(10.948557, 6.4835)
+theme_override_font_sizes/font_size = 5
+text = "Spacebar - Explode
+Left/Right (A/D) - Turn"
+horizontal_alignment = 1

@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://8tipul0mg5qk"]
+
+[ext_resource type="Texture2D" uid="uid://mulijsvts8n5" path="res://sprite/tnt.png" id="1_bu7am"]
+[ext_resource type="Script" uid="uid://cik5gdi5oh5ir" path="res://script/player_tnt.gd" id="1_duxnt"]
+[ext_resource type="Script" uid="uid://duvfkhoyblfyq" path="res://player/Camera/camera_2d.gd" id="3_sr2m4"]
+[ext_resource type="AudioStream" uid="uid://cb5kfw0abwg3b" path="res://sound/взрыв.MP3" id="4_ghfsp"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_duxnt"]
+rough = true
+bounce = 0.1
+absorbent = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_duxnt"]
+atlas = ExtResource("1_bu7am")
+region = Rect2(0, 0, 29, 59)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sr2m4"]
+atlas = ExtResource("1_bu7am")
+region = Rect2(29, 0, 29, 59)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ghfsp"]
+atlas = ExtResource("1_bu7am")
+region = Rect2(58, 0, 29, 59)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cmeql"]
+atlas = ExtResource("1_bu7am")
+region = Rect2(87, 0, 29, 59)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6v4js"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_duxnt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sr2m4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ghfsp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cmeql")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 20.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8q1fo"]
+radius = 11.0
+height = 49.998096
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_duxnt"]
+size = Vector2(20, 2)
+
+[node name="player_tnt" type="RigidBody2D" unique_id=1480681120]
+physics_material_override = SubResource("PhysicsMaterial_duxnt")
+inertia = 35.0
+angular_damp_mode = 1
+angular_damp = 10.0
+script = ExtResource("1_duxnt")
+
+[node name="Marker_move" type="Marker2D" parent="." unique_id=1729725526]
+position = Vector2(0, 28)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=966527063]
+sprite_frames = SubResource("SpriteFrames_6v4js")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.83029133
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1840764166]
+position = Vector2(0, 3)
+rotation = 0.008726646
+shape = SubResource("CapsuleShape2D_8q1fo")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1451204177]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=968324205]
+position = Vector2(0, 29)
+shape = SubResource("RectangleShape2D_duxnt")
+
+[node name="Timer" type="Timer" parent="." unique_id=1779297588]
+wait_time = 0.1
+one_shot = true
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1911908612]
+limit_left = 0
+limit_bottom = 540
+position_smoothing_enabled = true
+position_smoothing_speed = 1.0
+script = ExtResource("3_sr2m4")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1667062682]
+stream = ExtResource("4_ghfsp")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
