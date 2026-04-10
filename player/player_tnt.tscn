@@ -99,6 +99,10 @@ shape = SubResource("RectangleShape2D_duxnt")
 wait_time = 0.1
 one_shot = true
 
+[node name="Timer_nohige" type="Timer" parent="." unique_id=891155762]
+wait_time = 0.4
+one_shot = true
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1911908612]
 limit_left = 0
 limit_bottom = 540

@@ -15,7 +15,7 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 		$Boom.play()
 		$Camera2D.shake(0.2)
 		jump_count -= 1
-	if Input.is_action_just_pressed("ui_accept") and jump_count <= 0 and !jump:
+	if Input.is_action_just_pressed("ui_accept") and jump_count <= 0 and !jump and $Timer_nohige.is_stopped():
 		jump = true
 		$Timer.start()
 	var dir = Input.get_axis("ui_left", "ui_right")
@@ -23,8 +23,9 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	if body.is_in_group("floor") and jump_count < 1:
+	if body.is_in_group("floor") and jump_count < 1 and $Timer_nohige.is_stopped():
 		jump_count += 1
+		$Timer_nohige.start()
 		if !$reloud.playing:
 			$reloud.play()
 
@@ -33,7 +34,7 @@ func _on_timer_timeout() -> void:
 	jump = false
 
 
-func _on_colider_area_entered(area: Area2D) -> void:
+func _on_colider_area_entered(_area: Area2D) -> void:
 	call_deferred("reloud")
 
 func reloud():
