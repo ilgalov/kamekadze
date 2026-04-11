@@ -11,10 +11,12 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 	if (Input.is_action_just_pressed("ui_accept") or jump) and jump_count > 0:
 		var xa = sign(global_position.x - $Marker_move.global_position.x)
 		var yu = sign($Marker_move.global_position.y - global_position.y)
-		apply_impulse(Vector2(100 * xa, -600 * yu))
+		var no_gravity = linear_velocity.y / 2 if linear_velocity.y > 0 else 0
+		apply_impulse(Vector2(100 * xa, -600 * yu - no_gravity))
 		$Boom.play()
 		$Camera2D.shake(0.2)
 		jump_count -= 1
+		$Label.text = str(Vector2(100 * xa, -600 * yu - no_gravity))
 	if Input.is_action_just_pressed("ui_accept") and jump_count <= 0 and !jump and $Timer_nohige.is_stopped():
 		jump = true
 		$Timer.start()

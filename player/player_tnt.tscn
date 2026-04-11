@@ -62,6 +62,7 @@ size = Vector2(20, 2)
 collision_mask = 2
 physics_material_override = SubResource("PhysicsMaterial_duxnt")
 inertia = 35.0
+freeze_mode = 1
 angular_damp_mode = 1
 angular_damp = 10.0
 script = ExtResource("1_duxnt")
@@ -116,6 +117,12 @@ volume_db = -5.0
 [node name="reloud" type="AudioStreamPlayer2D" parent="." unique_id=1625328889]
 stream = ExtResource("5_cmeql")
 volume_db = 2.0
+
+[node name="Label" type="Label" parent="." unique_id=1330072436]
+offset_left = -19.0
+offset_top = -48.0
+offset_right = 21.0
+offset_bottom = -25.0
 
 [connection signal="area_entered" from="colider" to="." method="_on_colider_area_entered"]
 [connection signal="body_entered" from="jump" to="." method="_on_area_2d_body_entered"]

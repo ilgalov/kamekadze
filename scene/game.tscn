@@ -46,7 +46,7 @@ rotation = 6.2831855
 scale = Vector2(0.2340901, 4.176939)
 
 [node name="player_tnt" parent="." unique_id=54438833 instance=ExtResource("2_33cqm")]
-position = Vector2(567.0001, 367)
+position = Vector2(614.0001, 369.00006)
 rotation = 0.37347364
 
 [node name="Label" type="Label" parent="." unique_id=2092429065]
