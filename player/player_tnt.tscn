@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://duvfkhoyblfyq" path="res://player/Camera/camera_2d.gd" id="3_sr2m4"]
 [ext_resource type="AudioStream" uid="uid://cb5kfw0abwg3b" path="res://sound/взрыв.MP3" id="4_ghfsp"]
 [ext_resource type="AudioStream" uid="uid://8amghqccgpbo" path="res://sound/zvuk-peska-5.mp3" id="5_cmeql"]
+[ext_resource type="PackedScene" uid="uid://khcwwshof2nu" path="res://Ui/YouSave.tscn" id="6_6v4js"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_duxnt"]
 rough = true
@@ -86,6 +87,8 @@ scale = Vector2(1.05, 1)
 shape = SubResource("CapsuleShape2D_8q1fo")
 
 [node name="Save" type="Area2D" parent="." unique_id=1861574165]
+collision_layer = 0
+collision_mask = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Save" unique_id=523712591]
 position = Vector2(0, 3)
@@ -135,6 +138,8 @@ offset_right = -9.0
 offset_bottom = -25.0
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="YouSave" parent="." unique_id=907537202 instance=ExtResource("6_6v4js")]
 
 [connection signal="area_entered" from="Save" to="." method="_on_save_area_entered"]
 [connection signal="area_entered" from="colider" to="." method="_on_colider_area_entered"]

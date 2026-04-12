@@ -4,7 +4,8 @@ var speed_rot := 15
 var jump_count = 0
 var jump = false
 
-
+var sp
+var tween
 
 func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 	if (Input.is_action_just_pressed("ui_accept") or jump) and jump_count > 0:
@@ -42,5 +43,12 @@ func reloud():
 	global_position = Global.spawn
 
 
-func _on_save_area_entered(area: Area2D) -> void:
-	pass # Replace with function body.
+func _on_save_area_entered(_area: Area2D) -> void:
+	Global.spawn = global_position
+	appended()
+
+func appended():
+	sp = $YouSave.get_node("MarginContainer")
+	tween = create_tween()
+	tween.tween_property(sp, "modulate", Color(1.0, 1.0, 1.0, 1.0), 0.2)
+	tween.tween_property(sp, "modulate", Color(1.0, 1.0, 1.0, 0.0), 0.5)

@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://khcwwshof2nu"]
+
+[ext_resource type="Texture2D" uid="uid://dhhy2uyyedu2r" path="res://sprite/YouSave.png" id="1_xaed4"]
+
+[node name="YouSave" type="CanvasLayer" unique_id=907537202]
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=92876138]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=328148312]
+layout_mode = 2
+alignment = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer" unique_id=1734498957]
+layout_mode = 2
+size_flags_vertical = 10
+alignment = 2
+
+[node name="YouSave" type="Sprite2D" parent="MarginContainer/VBoxContainer/HBoxContainer" unique_id=1405165052]
+position = Vector2(924, -32)
+texture = ExtResource("1_xaed4")

@@ -74,3 +74,6 @@ rotation = 0.37347364
 
 [node name="SavePoint" parent="." unique_id=794719638 instance=ExtResource("4_xwcet")]
 position = Vector2(1265, 357)
+
+[node name="SavePoint2" parent="." unique_id=1044381299 instance=ExtResource("4_xwcet")]
+position = Vector2(247, 493)
