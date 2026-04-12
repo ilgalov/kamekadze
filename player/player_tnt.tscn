@@ -117,6 +117,10 @@ one_shot = true
 wait_time = 0.4
 one_shot = true
 
+[node name="Timer_returndB" type="Timer" parent="." unique_id=1707913316]
+wait_time = 0.1
+one_shot = true
+
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1911908612]
 limit_left = 0
 limit_bottom = 540
@@ -133,9 +137,9 @@ volume_db = 2.0
 
 [node name="Label" type="Label" parent="." unique_id=1330072436]
 offset_left = -49.0
-offset_top = -48.0
+offset_top = -67.0
 offset_right = -9.0
-offset_bottom = -25.0
+offset_bottom = -44.0
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -146,3 +150,4 @@ vertical_alignment = 1
 [connection signal="body_entered" from="jump" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="jump" to="." method="_on_jump_body_exited"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer_returndB" to="." method="_on_timer_returnd_b_timeout"]
