@@ -4,14 +4,13 @@ var speed_rot := 15
 var jump_count = 0
 var jump = false
 
-func _ready() -> void:
-	global_position = Global.spawn
+
 
 func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 	if (Input.is_action_just_pressed("ui_accept") or jump) and jump_count > 0:
 		var xa = sign(global_position.x - $Marker_move.global_position.x)
 		var yu = sign($Marker_move.global_position.y - global_position.y)
-		var no_gravity = linear_velocity.y / 2 if linear_velocity.y > 0 else 0
+		var no_gravity = linear_velocity.y if linear_velocity.y > 0 else 0
 		apply_impulse(Vector2(100 * xa, -600 * yu - no_gravity))
 		$Boom.play()
 		$Camera2D.shake(0.2)
@@ -40,4 +39,8 @@ func _on_colider_area_entered(_area: Area2D) -> void:
 	call_deferred("reloud")
 
 func reloud():
-	get_tree().reload_current_scene()
+	global_position = Global.spawn
+
+
+func _on_save_area_entered(area: Area2D) -> void:
+	pass # Replace with function body.

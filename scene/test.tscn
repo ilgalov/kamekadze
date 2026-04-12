@@ -1,0 +1,73 @@
+[gd_scene format=3 uid="uid://b28mymkxpotkt"]
+
+[ext_resource type="PackedScene" uid="uid://b6e3o4ryjkd7l" path="res://static/wall.tscn" id="1_u3ux8"]
+[ext_resource type="PackedScene" uid="uid://8tipul0mg5qk" path="res://player/player_tnt.tscn" id="2_1ifl7"]
+[ext_resource type="PackedScene" uid="uid://dcr58so575tea" path="res://static/water.tscn" id="3_hngkw"]
+[ext_resource type="PackedScene" uid="uid://6a65es271nxm" path="res://static/save_point.tscn" id="4_pb23w"]
+
+[node name="test" type="Node2D" unique_id=709406384]
+
+[node name="StaticBody2D" parent="." unique_id=426777202 instance=ExtResource("1_u3ux8")]
+position = Vector2(3, 519)
+scale = Vector2(2.5800004, 0.81999874)
+
+[node name="StaticBody2D2" parent="." unique_id=1736426961 instance=ExtResource("1_u3ux8")]
+position = Vector2(1498, -599)
+rotation = 1.5707964
+scale = Vector2(0.4200012, 0.5799997)
+
+[node name="StaticBody2D8" parent="." unique_id=1202315901 instance=ExtResource("1_u3ux8")]
+position = Vector2(2390, -597)
+rotation = 1.5707964
+scale = Vector2(0.5400012, 0.5799997)
+
+[node name="StaticBody2D9" parent="." unique_id=1100460950 instance=ExtResource("1_u3ux8")]
+position = Vector2(2189, -404)
+rotation = 1.5707964
+scale = Vector2(0.6600003, 14.460002)
+
+[node name="StaticBody2D4" parent="." unique_id=596194777 instance=ExtResource("1_u3ux8")]
+position = Vector2(490, 458)
+scale = Vector2(0.29158887, 1.601432)
+
+[node name="StaticBody2D6" parent="." unique_id=1040647461 instance=ExtResource("1_u3ux8")]
+position = Vector2(2189, -388)
+rotation = 3.1415927
+scale = Vector2(0.29158887, 0.40143183)
+
+[node name="StaticBody2D7" parent="." unique_id=1046466280 instance=ExtResource("1_u3ux8")]
+position = Vector2(2389, -583.00006)
+rotation = 3.1415927
+scale = Vector2(0.47, 0.401)
+
+[node name="StaticBody2D5" parent="." unique_id=1465633851 instance=ExtResource("1_u3ux8")]
+position = Vector2(1193, 357)
+rotation = 6.2831855
+scale = Vector2(0.2340901, 4.176939)
+
+[node name="player_tnt" parent="." unique_id=54438833 instance=ExtResource("2_1ifl7")]
+position = Vector2(614.0001, 369.00006)
+rotation = 0.37347364
+
+[node name="Water" parent="." unique_id=119407617 instance=ExtResource("3_hngkw")]
+position = Vector2(2189, -382)
+scale = Vector2(0.51998043, 1)
+
+[node name="Water5" parent="." unique_id=1092534127 instance=ExtResource("3_hngkw")]
+position = Vector2(1049, 496)
+scale = Vector2(1.775, 1)
+
+[node name="Water2" parent="." unique_id=780892166 instance=ExtResource("3_hngkw")]
+position = Vector2(2330, -224)
+scale = Vector2(0.45238486, 1)
+
+[node name="Water3" parent="." unique_id=1703720324 instance=ExtResource("3_hngkw")]
+position = Vector2(2189, -71)
+scale = Vector2(0.51998043, 1)
+
+[node name="Water4" parent="." unique_id=832301275 instance=ExtResource("3_hngkw")]
+position = Vector2(2330, 98)
+scale = Vector2(0.455, 1)
+
+[node name="SavePoint" parent="." unique_id=794719638 instance=ExtResource("4_pb23w")]
+position = Vector2(2084, -404)

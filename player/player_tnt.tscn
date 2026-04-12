@@ -51,6 +51,10 @@ animations = [{
 radius = 10.999581
 height = 50.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6v4js"]
+radius = 14.0
+height = 56.0
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cmeql"]
 radius = 11.0
 height = 50.0
@@ -80,6 +84,12 @@ frame_progress = 0.83029133
 position = Vector2(0, 3)
 scale = Vector2(1.05, 1)
 shape = SubResource("CapsuleShape2D_8q1fo")
+
+[node name="Save" type="Area2D" parent="." unique_id=1861574165]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Save" unique_id=523712591]
+position = Vector2(0, 3)
+shape = SubResource("CapsuleShape2D_6v4js")
 
 [node name="colider" type="Area2D" parent="." unique_id=1795649480]
 collision_mask = 4
@@ -112,18 +122,21 @@ script = ExtResource("3_sr2m4")
 
 [node name="Boom" type="AudioStreamPlayer2D" parent="." unique_id=1667062682]
 stream = ExtResource("4_ghfsp")
-volume_db = -5.0
+volume_db = -7.0
 
 [node name="reloud" type="AudioStreamPlayer2D" parent="." unique_id=1625328889]
 stream = ExtResource("5_cmeql")
 volume_db = 2.0
 
 [node name="Label" type="Label" parent="." unique_id=1330072436]
-offset_left = -19.0
+offset_left = -49.0
 offset_top = -48.0
-offset_right = 21.0
+offset_right = -9.0
 offset_bottom = -25.0
+horizontal_alignment = 1
+vertical_alignment = 1
 
+[connection signal="area_entered" from="Save" to="." method="_on_save_area_entered"]
 [connection signal="area_entered" from="colider" to="." method="_on_colider_area_entered"]
 [connection signal="body_entered" from="jump" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="jump" to="." method="_on_jump_body_exited"]
