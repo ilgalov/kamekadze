@@ -11,7 +11,7 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 	if (Input.is_action_just_pressed("ui_accept") or jump) and jump_count > 0:
 		var xa = sign(global_position.x - $Marker_move.global_position.x)
 		var yu = sign($Marker_move.global_position.y - global_position.y)
-		var no_gravity = linear_velocity.y if linear_velocity.y > 0 else 0
+		var no_gravity = (linear_velocity.y / 2) if linear_velocity.y > 0 else 0.0
 		apply_impulse(Vector2(100 * xa, -600 * yu - no_gravity))
 		$Boom.play()
 		$Camera2D.shake(0.2)
@@ -41,14 +41,16 @@ func _on_colider_area_entered(_area: Area2D) -> void:
 
 func reloud():
 	global_position = Global.spawn
+	rotation = 0
 
 
-func _on_save_area_entered(_area: Area2D) -> void:
-	Global.spawn = global_position
+func _on_save_area_entered(area: Area2D) -> void:
+	var body = area.get_parent()
+	Global.spawn = body.global_position + Vector2(15, -50)
 	appended()
 
 func appended():
 	sp = $YouSave.get_node("MarginContainer")
 	tween = create_tween()
-	tween.tween_property(sp, "modulate", Color(1.0, 1.0, 1.0, 1.0), 0.2)
-	tween.tween_property(sp, "modulate", Color(1.0, 1.0, 1.0, 0.0), 0.5)
+	tween.tween_property(sp, "modulate", Color(1.0, 1.0, 1.0, 1.0), 0.3)
+	tween.tween_property(sp, "modulate", Color(1.0, 1.0, 1.0, 0.0), 1)

@@ -8,6 +8,16 @@
 [node name="Game" type="Node2D" unique_id=1619006491]
 
 [node name="Label2" type="Label" parent="." unique_id=1558818289]
+offset_left = 1319.0
+offset_top = 161.00002
+offset_right = 1372.0
+offset_bottom = 183.8272
+scale = Vector2(10.948557, 6.4835)
+theme_override_font_sizes/font_size = 5
+text = "High, isn't it?"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="." unique_id=1677370409]
 offset_left = 71.0
 offset_top = 157.00002
 offset_right = 124.0
@@ -19,20 +29,21 @@ Left/Right (A/D) - Turn"
 horizontal_alignment = 1
 
 [node name="Label3" type="Label" parent="." unique_id=898313392]
-offset_left = 1487.0
+offset_left = 2678.0
 offset_top = 128.0
-offset_right = 1540.0
+offset_right = 2731.0
 offset_bottom = 150.0
 scale = Vector2(10.948557, 6.4835)
 theme_override_font_sizes/font_size = 5
-text = "Can't jump over?"
+text = "Can't jump over?
+Speed ​​up!"
 horizontal_alignment = 1
 
 [node name="Label4" type="Label" parent="." unique_id=406227730]
-offset_left = 2189.0
-offset_top = 128.0
-offset_right = 2242.0
-offset_bottom = 150.82718
+offset_left = 3369.9998
+offset_top = 52.000008
+offset_right = 3422.9998
+offset_bottom = 74.82719
 scale = Vector2(10.948557, 6.4835)
 theme_override_font_sizes/font_size = 5
 text = "Wow, what a hop!"
@@ -43,29 +54,43 @@ position = Vector2(1049, 496)
 scale = Vector2(1.775, 1)
 
 [node name="Water6" parent="." unique_id=119407617 instance=ExtResource("3_33cqm")]
-position = Vector2(1637.0001, 410)
+position = Vector2(2810, 410)
+scale = Vector2(3.833605, 5.733091)
+
+[node name="Water7" parent="." unique_id=1336989648 instance=ExtResource("3_33cqm")]
+position = Vector2(2071, 410)
 scale = Vector2(3.833605, 5.733091)
 
 [node name="StaticBody2D" parent="." unique_id=1736426961 instance=ExtResource("1_dbls1")]
 position = Vector2(-2, 519)
-scale = Vector2(2.5800004, 0.81999874)
+scale = Vector2(6.854052, 3.7767198)
 
 [node name="StaticBody2D4" parent="." unique_id=1195108030 instance=ExtResource("1_dbls1")]
 position = Vector2(490, 458)
 scale = Vector2(0.29158887, 1.601432)
 
 [node name="StaticBody2D5" parent="." unique_id=2002259716 instance=ExtResource("1_dbls1")]
-position = Vector2(1193, 357)
+position = Vector2(2250, 357)
+rotation = 6.2831855
+scale = Vector2(0.292, 4.177)
+
+[node name="StaticBody2D8" parent="." unique_id=2146778267 instance=ExtResource("1_dbls1")]
+position = Vector2(1192, 458)
 rotation = 6.2831855
 scale = Vector2(0.2340901, 4.176939)
 
+[node name="StaticBody2D9" parent="." unique_id=650893136 instance=ExtResource("1_dbls1")]
+position = Vector2(1640.0001, 309)
+rotation = 6.2831855
+scale = Vector2(0.2340901, 5.3769403)
+
 [node name="StaticBody2D6" parent="." unique_id=147706062 instance=ExtResource("1_dbls1")]
-position = Vector2(1920, 357)
+position = Vector2(3116, 357)
 rotation = 6.2831855
 scale = Vector2(0.2340901, 4.176939)
 
 [node name="StaticBody2D7" parent="." unique_id=1100331606 instance=ExtResource("1_dbls1")]
-position = Vector2(2254, 250)
+position = Vector2(3427, 250)
 scale = Vector2(0.2340901, 7.558594)
 
 [node name="player_tnt" parent="." unique_id=1480681120 instance=ExtResource("2_33cqm")]
@@ -73,7 +98,10 @@ position = Vector2(78.00006, 453)
 rotation = 0.37347364
 
 [node name="SavePoint" parent="." unique_id=794719638 instance=ExtResource("4_xwcet")]
-position = Vector2(1265, 357)
+position = Vector2(2281, 357)
 
-[node name="SavePoint2" parent="." unique_id=1044381299 instance=ExtResource("4_xwcet")]
-position = Vector2(247, 493)
+[node name="SavePoint3" parent="." unique_id=280241106 instance=ExtResource("4_xwcet")]
+position = Vector2(2025, 309)
+
+[node name="SavePoint2" parent="." unique_id=827266557 instance=ExtResource("4_xwcet")]
+position = Vector2(921, 458)
