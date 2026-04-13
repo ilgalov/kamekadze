@@ -51,10 +51,21 @@ from the wall,
 and then back"
 horizontal_alignment = 1
 
+[node name="Label8" type="Label" parent="." unique_id=807082287]
+offset_left = 4374.0
+offset_top = -65.0
+offset_right = 4433.825
+offset_bottom = -46.0
+scale = Vector2(10.948557, 6.4835)
+theme_override_font_sizes/font_size = 5
+text = "jump-jump
+speed up"
+horizontal_alignment = 1
+
 [node name="Label7" type="Label" parent="." unique_id=346061262]
-offset_left = 4620.0
+offset_left = 8281.0
 offset_top = -69.99999
-offset_right = 4652.7905
+offset_right = 8313.791
 offset_bottom = -59.20336
 scale = Vector2(10.948557, 6.4835)
 theme_override_font_sizes/font_size = 5
@@ -69,12 +80,16 @@ scale = Vector2(1.775, 1)
 position = Vector2(2810, 410)
 scale = Vector2(3.833605, 5.733091)
 
+[node name="Water9" parent="." unique_id=2016912085 instance=ExtResource("3_33cqm")]
+position = Vector2(4996, 183.00002)
+scale = Vector2(3.833605, 14.933092)
+
 [node name="Water8" parent="." unique_id=1792078324 instance=ExtResource("3_33cqm")]
 position = Vector2(4314, 410)
 scale = Vector2(3.833605, 5.733091)
 
 [node name="Water10" parent="." unique_id=1231889358 instance=ExtResource("3_33cqm")]
-position = Vector2(4893, 204)
+position = Vector2(8554, 204)
 scale = Vector2(11.153615, 17.613092)
 
 [node name="Water7" parent="." unique_id=1336989648 instance=ExtResource("3_33cqm")]
@@ -93,6 +108,11 @@ scale = Vector2(0.29158887, 1.601432)
 position = Vector2(2250, 357)
 rotation = 6.2831855
 scale = Vector2(0.292, 4.177)
+
+[node name="StaticBody2D17" parent="." unique_id=729969049 instance=ExtResource("1_dbls1")]
+position = Vector2(4448, 168)
+rotation = 6.2831855
+scale = Vector2(0.30407515, 1239557.5)
 
 [node name="StaticBody2D8" parent="." unique_id=2146778267 instance=ExtResource("1_dbls1")]
 position = Vector2(1192, 458)
@@ -114,13 +134,13 @@ position = Vector2(3870.0002, 362.00003)
 rotation = 6.2831855
 scale = Vector2(0.2340901, 4.176939)
 
-[node name="StaticBody2D12" parent="." unique_id=882268384 instance=ExtResource("1_dbls1")]
-position = Vector2(4448, 168.00002)
+[node name="StaticBody2D14" parent="." unique_id=2027515894 instance=ExtResource("1_dbls1")]
+position = Vector2(5309, 168.00002)
 rotation = 6.2831855
-scale = Vector2(0.40448156, 11.195508)
+scale = Vector2(0.2057758, 11.117119)
 
 [node name="StaticBody2D13" parent="." unique_id=192101242 instance=ExtResource("1_dbls1")]
-position = Vector2(5777.0005, 168.00002)
+position = Vector2(9438, 168.00002)
 rotation = 6.2831855
 scale = Vector2(0.2340901, 9.33308)
 
@@ -129,12 +149,32 @@ position = Vector2(4316, -378)
 rotation = 6.2831855
 scale = Vector2(0.01064046, 15.852311)
 
+[node name="StaticBody2D15" parent="." unique_id=1539666265 instance=ExtResource("1_dbls1")]
+position = Vector2(5309, -310)
+rotation = 6.2831855
+scale = Vector2(0.01064046, 13.772311)
+
+[node name="StaticBody2D19" parent="." unique_id=29505370 instance=ExtResource("1_dbls1")]
+position = Vector2(5183, -543.99994)
+rotation = -1.5707964
+scale = Vector2(0.01064046, 22.892292)
+
+[node name="StaticBody2D18" parent="." unique_id=1568760471 instance=ExtResource("1_dbls1")]
+position = Vector2(5757, -310)
+rotation = -4.712389
+scale = Vector2(0.01064046, 10.732311)
+
+[node name="StaticBody2D16" parent="." unique_id=181706604 instance=ExtResource("1_dbls1")]
+position = Vector2(5177, -565)
+rotation = 6.2831855
+scale = Vector2(0.01064046, 13.052313)
+
 [node name="StaticBody2D7" parent="." unique_id=1100331606 instance=ExtResource("1_dbls1")]
 position = Vector2(3427, 250)
 scale = Vector2(0.2340901, 7.558594)
 
 [node name="player_tnt" parent="." unique_id=1480681120 instance=ExtResource("2_33cqm")]
-position = Vector2(100.00006, 439.00003)
+position = Vector2(4492, 120)
 rotation = 0.37347364
 
 [node name="SavePoint" parent="." unique_id=794719638 instance=ExtResource("4_xwcet")]
@@ -143,8 +183,11 @@ position = Vector2(2281, 357)
 [node name="SavePoint4" parent="." unique_id=296237551 instance=ExtResource("4_xwcet")]
 position = Vector2(4180, 362)
 
+[node name="SavePoint6" parent="." unique_id=1083681003 instance=ExtResource("4_xwcet")]
+position = Vector2(4497, 168)
+
 [node name="SavePoint5" parent="." unique_id=1022318570 instance=ExtResource("4_xwcet")]
-position = Vector2(4462, 168)
+position = Vector2(8123, 168)
 
 [node name="SavePoint3" parent="." unique_id=280241106 instance=ExtResource("4_xwcet")]
 position = Vector2(2025, 309)
