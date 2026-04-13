@@ -22,7 +22,6 @@ func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
 		$Camera2D.shake(0.2)
 		jump_count -= 1
 		$Label.text = str(Vector2(100 * xa, -600 * yu - no_gravity)) + "\n" + str($Boom.volume_db)
-	$Label.text = str($Boom.volume_db)
 	if Input.is_action_just_pressed("ui_accept") and jump_count <= 0 and !jump and $Timer_nohige.is_stopped():
 		jump = true
 		$Timer.start()
